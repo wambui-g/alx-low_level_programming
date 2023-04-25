@@ -9,24 +9,33 @@
  */
 void print_to_98(int n)
 {
-	int i, j;
-
 	if (n < 98)
 	{
-		for (i = n; i <= 98; i++)
+		for (int i = n; i <= 98; i++)
 		{
-			printf("%d, ", i);
-		/*	_putchar(',');*/
+			if (i == 98)
+			{
+				printf("%d", i);
+			}
+			else
+			{
+				printf("%d, ", i);
+			}
 		}
 	}
 
 	else if (n > 98)
 	{
-		for (j = n; j >= 98; j--)
+		for (int j = n; j >= 98; j--)
 		{
-			printf("%d, ", j);
-		/*	_putchar(',');*/
-		}
+			if (i == 98)
+			{
+				printf("%d", j);
+			}
+			else
+			{
+				printf("%d, ", j);
+			}
 	}
 
 	else
