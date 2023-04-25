@@ -14,7 +14,7 @@ void print_to_98(int n)
 	{
 		for (i = n; i <= 98; i++)
 		{
-			_putchar(i + '0');
+			printf("%d", i);
 			_putchar(',');
 		}
 	}
@@ -23,14 +23,14 @@ void print_to_98(int n)
 	{
 		for (j = n; j >= 98; j--)
 		{
-			_putchar(j + '0');
+			printf("%d", j);
 			_putchar(',');
 		}
 	}
 
 	else
 	{
-		_putchar(n + '0');
+		printf("%d", n);
 	}
 
 	_putchar('\n');
