@@ -2,13 +2,14 @@
 
 /**
  * add- adds ints
- * @int: integer to consider
+ * @a: integer to consider
+ * @b: integer to consider
  *
  * Return: int
  */
-int add(int, int)
+int add(int a, int b)
 {
-	int a, b, sum;
+	int sum;
 
 	sum = a + b;
 
