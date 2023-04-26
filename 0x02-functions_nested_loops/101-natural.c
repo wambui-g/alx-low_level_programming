@@ -16,6 +16,8 @@ int main(void)
 		{
 			sum = sum + n;
 		}
+
 		n++;
 	}
+
 }
