@@ -2,6 +2,8 @@
 
 /**
  * print_most_numbers- prints all apart from 2 and 4
+ * 
+ * Desc: print numbers
  *
  * Return: void
  */
