@@ -3,7 +3,7 @@
 /**
  * more_numbers- numbers 10 times
  *
- * Return: void
+ * Return: 0 (success)
  */
 void more_numbers(void)
 {
