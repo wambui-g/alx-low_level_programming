@@ -2,29 +2,31 @@
 
 /**
  * *leet- encodes string into 1337
- * @c: character to consider
+ * @s: character to consider
  *
  * Return: char
  */
-char *leet(char *c)
+char *leet(char *s)
 {
-	int i = 0, j = 0, k = 0;
+	int a = 0, b = 0, l = 5;
 
-	char l[] = "oOlLeEaAtT";
-	char e[] = "0011334477";
+	char r[5] = {'A', 'E', 'O', 'T', 'L'};
+	char n[5] = {'4', '3', '0', '7', '1'};
 
-	while (c[i] != '\0')
+	while (s[a])
 	{
-		while (l[j] != '\0')
+		b = 0;
+
+		while (b < l)
 		{
-			if (c[i] == l[j])
+			if (s[a] == r[b] || s[a] - 32 == r[b])
 			{
-				k = j;
-				c[i] = e[k];
+				s[a] = n[b];
 			}
-			j++;
+
+			b++;
 		}
-		i++;
+		a++;
 	}
-	return (c);
+	return (s);
 }
