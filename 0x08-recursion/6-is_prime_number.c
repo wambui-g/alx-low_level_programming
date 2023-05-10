@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * is _prime- checks if prime
+ * is_prime- checks if prime
  * @n: number to consider
  * @i: divisor
  *
