@@ -2,8 +2,8 @@
 
 /**
  * main- prints all arguements it receives
- * @argc:
- * @argv:
+ * @argc: arguement
+ * @argv: arguement
  *
  * Return: 0
  */

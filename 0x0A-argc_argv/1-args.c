@@ -2,8 +2,8 @@
 
 /**
  * main- prints number of arguments passed
- * @argc:
- * @argv:
+ * @argc: arguement
+ * @argv: arguement
  *
  * Return: o
  */
