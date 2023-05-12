@@ -1,32 +1,46 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * main- prints sum
- * @argc: 
- * @argv:
+ * @argc: arguement
+ * @argv: arguement
  *
  * Return: 1 if contains symbols 0 otherwise
  */
 int main(int argc, char *argv[])
 {
-	int num, digit, sum = 0;
+	int i;
+	unsigned int k, sum = 0;
+	char *e;
 
-	for (num = 1; num < argc; num++)
+	if (argc > 1)
 	{
-		for (digit = 0; argv[num][digit]; digit++)
+		for (i = 1; i < argc; i++)
 		{
-			if (argv[num][digit] < '0' || argv[num][digit] > '9')
+			e = arg[i];
+
+			for (k = 0; k < strlen(e); k++)
 			{
-				printf("Error\n");
-				return (1);
+				if (e[k] < 48 || e[k] > 57)
+				{
+					printf("Error\n");
+					return (1);
+				}
 			}
+
+			sum += atoi(e);
+			e++;
 		}
 
-		sum += atoi(argv[num]);
+		printf("%d\n", sum);
 	}
-
-	printf("%d\n", sum);
+	else
+	{
+		printf("0\n");
+	}
 
 	return (0);
 }
