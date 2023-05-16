@@ -2,68 +2,74 @@
 #include <stdlib.h>
 
 /**
- * ch_free_grid- frees a 2d array
- * @grid: array
- * @height: height of array
+ * count_word- count no of words
+ * @s: string to consider
  *
- * Return: void
+ * Return: number of words
  */
-void ch_free_grid(char **grid, unsigned int height)
+int count_word(char *s)
 {
-	if (grid != NULL && height != 0)
+	int flag, c, w;
+
+	flag = 0;
+	w = 0;
+
+	for (c = 0; s[c] != '\0'; c++)
 	{
-		for (; height > 0; height--)
-			free(grid[height]);
-		free(grid[height]);
-		free(grid);
+		flag = 0;
+		if (flag == 0)
+		{
+			flag = 1;
+		}
+		return (w);
 	}
 }
 
 /**
- * strtow- splits a string into words
+ * **strtow- strings to words
  * @str: string to consider
  *
- * Return: pointer of array
+ * Return: pointer to array of string
  */
 char **strtow(char *str)
 {
-	char **n;
-	unsigned int c, height, i, j, a1;
+	char **matrix, *tmp;
+	int i, k = 0, len = 0, words, c = 0, start, end;
 
-	if (str == NULL || *str == '\0')
-		return (NULL);
-	for (c = height = 0; str[c] != '\0'; c++)
-	{
-		if (str[c] != ' ' && (str[c + 1] == ' ' || str[c + 1] == '\0'))
-			height++;
-	}
-	n = malloc((height + 1) * sizeof(char *));
+	while (*(str + len))
+		len++;
+	words = count_word(str);
 
-	if (n == NULL || height == 0)
-	{
-		free(n);
+	if (words == 0)
 		return (NULL);
-	}
-	for (i = a1 = 0; i < height; i++)
+
+	matrix = (char **)malloc(sizeof(char *) * (words + 1));
+
+	if (matrix == NULL)
+		return (NULL);
+
+	for (i = 0; i <= len; i++)
 	{
-		for (c = a1; str[c] != '\0'; c++)
+		if (str[i] == ' ' || str[i] == '\0')
 		{
-			if (str[c] == ' ')
-				a1++;
-			if (str[c] != ' ' && (str[c + 1] == ' ' || str[c + 1] == '\0'))
+			if (c)
 			{
-				n[i] = malloc((c - a1 + 2) * sizeof(char));
-				if (n[i] == NULL)
-				{
-					ch_free_grid(n, i);
+				end = i;
+
+				tmp = (char *)malloc(sizeof(char) * (c + 1));
+				if (tmp == NULL)
 					return (NULL);
-				}
-				break;
+				while (start < end)
+					*tmp++ = str[start++];
+				*tmp = '\0';
+				matrix[k] = tmp - c;
+				k++;
+				c = 0;
 			}
 		}
-		for (j = 0; a1 <= c; a1++, j++)
-			n[i][j] = '\0';
+		else if (c++ == 0)
+			start = i;
 	}
-	n[i] = NULL;
-	return (n);
+	matrix[k] = NULL;
+	return (matrix);
 }
