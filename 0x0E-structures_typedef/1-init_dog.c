@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * int_dog- initialize struct
+ * init_dog- initialize struct
  * @d: dog struct
  * @name: name of dog
  * @age: age of dog
