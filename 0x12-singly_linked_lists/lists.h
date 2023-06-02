@@ -2,12 +2,6 @@
 #define LISTS_H
 
 /**
- * file- lists.h
- *
- * Desc: header file
- */
-int _putchar(char c)
-/**
  * struct list_s- singly linked list
  * @str: string - (malloc'ed string)
  * @len: length of the string
