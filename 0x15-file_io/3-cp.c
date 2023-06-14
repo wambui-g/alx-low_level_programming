@@ -43,9 +43,9 @@ int main(int argc, char **argv)
 	if (result_read < 0 || result_write < 0)
 	{
 		if (result_read < 0)
-			dprintf(STDERR_FILENO, "Error: cannot close fd %d\n", fd_read);
+			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_read);
 		if (result_write < 0)
-			dprintf(STDERR_FILENO, "Error: cannot close fd %d\n", fd_write);
+			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_write);
 		exit(100);
 	}
 	return (0);
