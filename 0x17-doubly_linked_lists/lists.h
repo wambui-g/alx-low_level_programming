@@ -10,7 +10,7 @@
  * @prev: previous node
  * @next: next node
  *
- * Desc: doubly linked list
+ * Description: doubly linked list
  */
 
 typedef struct dlistint_s
