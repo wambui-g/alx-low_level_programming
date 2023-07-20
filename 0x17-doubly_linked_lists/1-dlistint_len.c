@@ -2,8 +2,8 @@
 #include <stdio.h>
 
 /**
- * dlistint_len - checks no of elements in list\
- * @h: head
+ * dlistint_len - checks no of elements in list
+ * @h: list head
  *
  * Return: no of nodes
  */
