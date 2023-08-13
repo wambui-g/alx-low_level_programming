@@ -26,7 +26,7 @@ void hash_table_print(const hash_table_t *ht)
 			node = node->next;
 
 			if (comma == 0)
-				comma = =1;
+				comma = 1;
 		}
 	}
 	printf("}\n");
